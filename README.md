@@ -1,35 +1,11 @@
-# :partying_face: Template Go
+# :write: `ghmd`
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ZEISS/template-go?quickstart=1)
+[![Test & Build](https://github.com/zeiss/ghmd/actions/workflows/main.yml/badge.svg)](https://github.com/zeiss/ghmd/actions/workflows/main.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zeiss/ghmd)](https://goreportcard.com/report/github.com/zeiss/ghmd)
+[![Taylor Swift](https://img.shields.io/badge/secured%20by-taylor%20swift-brightgreen.svg)](https://twitter.com/SwiftOnSecurity)
+[![Volkswagen](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-> This is a GitHub Template Repository. You can use the green button to create a new repository based on this template. Read more about [GitHub Template Repositories](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
+## License
 
-## Get Started
-
-This template supports `Makefile` to run tooling.
-
-> `make` is choosen as it is available on most systems.
-
-```bash
-# show `help`
-make help
-```
-
-Other available targets are
-
-```bash
-build                          Build the binary file.
-clean                          Remove previous build.
-fmt                            Run go fmt against code.
-generate                       Generate code.
-help                           Display this help screen.
-lint                           Run lint.
-mocks                          Generate mocks.
-release                        Release the project.
-test                           Run tests.
-vet                            Run go vet against code.
-```
-
-The convention is to use `make` to run the build.
-
-Happy coding!
+[Apache 2.0](/LICENSE)
