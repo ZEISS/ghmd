@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"sync"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/pkg/errors"
@@ -43,8 +42,6 @@ type Spec struct {
 	Groups      []Group        `yaml:"groups"`
 	Contents    ContentsConfig `yaml:"contents"`
 	EntryConfig EntryConfig    `yaml:"entry"`
-
-	sync.Mutex `yaml:"-"`
 }
 
 type ContentsConfig struct {
