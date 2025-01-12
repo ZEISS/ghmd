@@ -17,11 +17,10 @@ type renderer struct {
 }
 
 func (r *renderer) Render(w io.Writer) error {
-	if err := Header(r.s.Header).Render(w); err != nil {
-		return err
-	}
-
-	return nil
+	return Write(w,
+		Header(r.s.Header),
+		Spacer(),
+		Footer(r.s.Footer))
 }
 
 func New(s *spec.Spec) Renderer {
@@ -58,4 +57,23 @@ func (s *stringer) Render(w io.Writer) error {
 
 func Header(header string) Node {
 	return &stringer{text: header}
+}
+
+func Footer(footer string) Node {
+	return &stringer{text: footer}
+}
+
+func Spacer() Node {
+	return &stringer{text: "\n"}
+}
+
+func Write(out io.Writer, fn ...Renderer) error {
+	for _, f := range fn {
+		err := f.Render(out)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }

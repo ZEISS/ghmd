@@ -38,7 +38,9 @@ type Spec struct {
 	// Description is a short description of the project or repository (optional)
 	Description string `yaml:"description,omitempty"`
 	// Header is the header of the markdown file
-	Header      string         `yaml:"header"`
+	Header string `yaml:"header"`
+	// Footer is the footer of the markdown file
+	Footer      string         `yaml:"footer"`
 	Groups      []Group        `yaml:"groups"`
 	Contents    ContentsConfig `yaml:"contents"`
 	EntryConfig EntryConfig    `yaml:"entry"`
