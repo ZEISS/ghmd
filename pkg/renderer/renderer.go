@@ -31,21 +31,6 @@ type Node interface {
 	Render(w io.Writer) error
 }
 
-type statefulWriter struct {
-	w   io.Writer
-	err error
-}
-
-// Write is a node that writes to the stateful writer.
-func (w *statefulWriter) Write(p []byte) {
-	if w.err != nil {
-		return
-	}
-	_, w.err = w.w.Write(p)
-}
-
-var _ Node = (*stringer)(nil)
-
 type stringer struct {
 	text string
 }
