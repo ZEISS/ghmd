@@ -8,7 +8,7 @@ require (
 	github.com/go-playground/validator/v10 v10.27.0
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.9.1
-	github.com/stretchr/testify v1.11.0
+	github.com/stretchr/testify v1.11.1
 	github.com/zeiss/pkg v0.1.23
 	gopkg.in/yaml.v3 v3.0.1
 )
